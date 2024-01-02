@@ -115,7 +115,7 @@
         export ANDROID_HOME=$HOME/Library/Android/sdk
         export PATH=$PATH:$ANDROID_HOME/emulator
         export PATH=$PATH:$ANDROID_HOME/platform-toolsexport PATH="/usr/local/opt/openjdk@17/bin:$PATH"
-        
+        export PATH=/Users/vipulgupta/.cargo/bin
         eval "$(direnv hook zsh)"
       '';
     };
@@ -173,6 +173,7 @@
         export ANDROID_HOME=$HOME/Library/Android/sdk
         export PATH=$PATH:$ANDROID_HOME/emulator
         export PATH=$PATH:$ANDROID_HOME/platform-toolsexport PATH="/usr/local/opt/openjdk@17/bin:$PATH"
+        export PATH=/Users/vipulgupta/.cargo/bin
         eval "$(direnv hook zsh)"
       '';
     };
