@@ -3,8 +3,8 @@
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "vipulgupta";
-  home.homeDirectory = "/Users/vipulgupta";
+  home.username = "vipul.gupta";
+  home.homeDirectory = "/Users/vipul.gupta";
   nixpkgs.config.allowUnfree = true;
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -94,28 +94,31 @@
         # Make Nix and home-manager installed things available in PATH.
         export PATH=/run/current-system/sw/bin/:/nix/var/nix/profiles/default/bin:$HOME/.nix-profile/bin:/etc/profiles/per-user/$USER/bin:$PATH
         
-        alias enc="sh /Users/vipulgupta/Desktop/utils/encrypt/encrypt.sh android"
-        alias encios="sh /Users/vipulgupta/Desktop/utils/encrypt/encrypt.sh ios"
+        alias enc="sh /Users/vipul.gupta/Desktop/utils/encrypt/encrypt.sh android"
+        alias encios="sh /Users/vipul.gupta/Desktop/utils/encrypt/encrypt.sh ios"
 
         alias python="python3"
 
         #Path to run Euler build
-        export PATH="$PATH:/Users/vipulgupta/Desktop/Backend/euler-tools/euler-bin"
+        # export PATH="$PATH:/Users/vipul.gupta/Desktop/Backend/euler-tools/euler-bin"
 
 
-        export PATH="/usr/local/opt/postgresql/bin:$PATH"
-
-        export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
-        export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
-        export NVM_DIR=~/.nvm
-        source $(brew --prefix nvm)/nvm.sh
-
+        # export PATH="/usr/local/opt/postgresql/bin:$PATH"
+        export PATH=/opt/homebrew/bin:$PATH
+        export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+        # export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+        # export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+        # export NVM_DIR=~/.nvm
+        # source $(brew --prefix nvm)/nvm.sh
+        export NVM_DIR="$HOME/.nvm"
+        [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+        [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 
         export ANDROID_HOME=$HOME/Library/Android/sdk
         export PATH=$PATH:$ANDROID_HOME/emulator
         export PATH=$PATH:$ANDROID_HOME/platform-toolsexport PATH="/usr/local/opt/openjdk@17/bin:$PATH"
-        export PATH=$PATH:/Users/vipulgupta/.cargo/bin
+        export PATH=$PATH:/Users/vipul.gupta/.cargo/bin
         eval "$(direnv hook zsh)"
       '';
     };
@@ -151,29 +154,32 @@
         # Make Nix and home-manager installed things available in PATH.
         export PATH=/run/current-system/sw/bin/:/nix/var/nix/profiles/default/bin:$HOME/.nix-profile/bin:/etc/profiles/per-user/$USER/bin:$PATH
         
-        alias enc="sh /Users/vipulgupta/Desktop/utils/encrypt/encrypt.sh android"
-        alias encios="sh /Users/vipulgupta/Desktop/utils/encrypt/encrypt.sh ios"
+        alias enc="sh /Users/vipul.gupta/utils/encrypt/encrypt.sh android"
+        alias encios="sh /Users/vipul.gupta/utils/encrypt/encrypt.sh ios"
 
         alias python="python3"
 
         #Path to run Euler build
-        export PATH="$PATH:/Users/vipulgupta/Desktop/Backend/euler-tools/euler-bin"
+        # export PATH="$PATH:/Users/vipul.gupta/Desktop/Backend/euler-tools/euler-bin"
 
 
-        export PATH="/usr/local/opt/postgresql/bin:$PATH"
+        # export PATH="/usr/local/opt/postgresql/bin:$PATH"
 
-        export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
-        export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
-        export NVM_DIR=~/.nvm
-        # fix path by checking $(brew --prefix nvm)
-        source /usr/local/opt/nvm/nvm.sh
+        # export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+        # export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+        # export NVM_DIR=~/.nvm
+        # # fix path by checking $(brew --prefix nvm)
+        # source /usr/local/opt/nvm/nvm.sh
+        export NVM_DIR="$HOME/.nvm"
+        export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+        [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+        [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-
-
+        export PATH=/opt/homebrew/bin:$PATH
         export ANDROID_HOME=$HOME/Library/Android/sdk
         export PATH=$PATH:$ANDROID_HOME/emulator
         export PATH=$PATH:$ANDROID_HOME/platform-toolsexport PATH="/usr/local/opt/openjdk@17/bin:$PATH"
-        export PATH=$PATH:/Users/vipulgupta/.cargo/bin
+        export PATH=$PATH:/Users/vipul.gupta/.cargo/bin
         eval "$(direnv hook zsh)"
       '';
     };
