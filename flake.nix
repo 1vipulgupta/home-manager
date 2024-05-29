@@ -40,7 +40,7 @@
                 imports = [ self.homeModules.default ];
                 home.username = myUserName;
                 home.homeDirectory = "/${if pkgs.stdenv.isDarwin then "Users" else "home"}/${myUserName}";
-                home.stateVersion = "23.05";
+                home.stateVersion = "24.05";
               });
 
           # Enables 'nix run' to activate.

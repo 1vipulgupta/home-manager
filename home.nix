@@ -13,7 +13,7 @@
   # You should not change this value, even if you update Home Manager. If you do
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
-  home.stateVersion = "23.05"; # Please read the comment before changing.
+  home.stateVersion = "24.05"; # Please read the comment before changing.
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -114,12 +114,22 @@
         [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
         [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+        export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
+        export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
+
+        export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
+        export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
+        export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+        export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
 
         export ANDROID_HOME=$HOME/Library/Android/sdk
+        export PATH=$PATH:$HOME/.cargo/env
+        export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
         export PATH=$PATH:$ANDROID_HOME/emulator
         export PATH=$PATH:$ANDROID_HOME/platform-toolsexport PATH="/usr/local/opt/openjdk@17/bin:$PATH"
         export PATH=$PATH:/Users/vipul.gupta/.cargo/bin
-        eval "$(direnv hook zsh)"
+        eval "$(direnv hook bash)"
       '';
     };
 
@@ -168,6 +178,18 @@
         # export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
         # export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
         # export NVM_DIR=~/.nvm
+        export PATH=$PATH:$HOME/.cargo/env
+        export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+        
+        export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
+        export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
+        
+        export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
+        export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
+        
+        export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+        export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
+
         # # fix path by checking $(brew --prefix nvm)
         # source /usr/local/opt/nvm/nvm.sh
         export NVM_DIR="$HOME/.nvm"
