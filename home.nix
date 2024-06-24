@@ -97,12 +97,21 @@
         alias enc="sh /Users/vipul.gupta/Desktop/utils/encrypt/encrypt.sh android"
         alias encios="sh /Users/vipul.gupta/Desktop/utils/encrypt/encrypt.sh ios"
 
-        alias python="python3"
+        # alias python="python3"
+        # alias python="/opt/homebrew/bin/python3.11"
+        # alias pip="/opt/homebrew/bin/pip3.11"
 
         #Path to run Euler build
         # export PATH="$PATH:/Users/vipul.gupta/Desktop/Backend/euler-tools/euler-bin"
 
+        # The next line updates PATH for the Google Cloud SDK.
+        if [ -f '/Users/vipul.gupta/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/vipul.gupta/Downloads/google-cloud-sdk/path.bash.inc'; fi
 
+        # The next line enables shell command completion for gcloud.
+        if [ -f '/Users/vipul.gupta/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/vipul.gupta/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+        export PATH="/opt/homebrew/sbin:$PATH"
+        export PATH="/opt/homebrew/bin:$PATH"
         # export PATH="/usr/local/opt/postgresql/bin:$PATH"
         export PATH=/opt/homebrew/bin:$PATH
         export PATH=/opt/homebrew/opt/ruby/bin:$PATH
@@ -143,7 +152,7 @@
       enable = true;
       autocd = true;
       dotDir = ".config/zsh";
-      enableAutosuggestions = false;
+      autosuggestion.enable = false;
       enableCompletion = false;
       shellAliases = {
         l = "ls -la";
@@ -166,8 +175,17 @@
         
         alias enc="sh /Users/vipul.gupta/utils/encrypt/encrypt.sh android"
         alias encios="sh /Users/vipul.gupta/utils/encrypt/encrypt.sh ios"
+        export PATH="/opt/homebrew/sbin:$PATH"
+        export PATH="/opt/homebrew/bin:$PATH"
+        # alias python="python3"
+        # alias python="/opt/homebrew/bin/python3.11"
+        # alias pip="/opt/homebrew/bin/pip3.11"
 
-        alias python="python3"
+        # The next line updates PATH for the Google Cloud SDK.
+        if [ -f '/Users/vipul.gupta/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/vipul.gupta/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+        # The next line enables shell command completion for gcloud.
+        if [ -f '/Users/vipul.gupta/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/vipul.gupta/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
         #Path to run Euler build
         # export PATH="$PATH:/Users/vipul.gupta/Desktop/Backend/euler-tools/euler-bin"
