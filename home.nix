@@ -100,7 +100,7 @@
         
         alias enc="sh /Users/vipul.gupta/Desktop/utils/encrypt/encrypt.sh android"
         alias encios="sh /Users/vipul.gupta/Desktop/utils/encrypt/encrypt.sh ios"
-        alias loadenv='source ~/Repo/lightbox-new/.env'
+        alias loadenv='source ~/Repo/lightbox/.env'
         # alias python="python3"
         # alias python="/opt/homebrew/bin/python3.11"
         # alias pip="/opt/homebrew/bin/pip3.11"
@@ -177,7 +177,7 @@
 
         # Make Nix and home-manager installed things available in PATH.
         export PATH=/run/current-system/sw/bin/:/nix/var/nix/profiles/default/bin:$HOME/.nix-profile/bin:/etc/profiles/per-user/$USER/bin:$PATH
-        alias loadenv='source ~/Repo/lightbox-new/.env'
+        alias loadenv='source ~/Repo/lightbox/.env'
         alias enc="sh /Users/vipul.gupta/utils/encrypt/encrypt.sh android"
         alias encios="sh /Users/vipul.gupta/utils/encrypt/encrypt.sh ios"
         export PATH="/opt/homebrew/sbin:$PATH"
